@@ -1,0 +1,53 @@
+{% extends "nav_institute.html" %} {% block content %}
+<div class="container mb-2">
+    <div class="row my-2">
+        <div class="col-auto">
+            <input class="form-control" id="myInput" type="text" placeholder="Search..">
+        </div>
+        <div class="col-auto ml-auto">
+            No of Students : {{students|length}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>Reg no</th>
+                            <th>District</th>
+                        </tr>
+                    </thead>
+                    <tbody id="myTable">
+                        {% for student in students %}
+                        <tr>
+                            <td>{{student.name}}</td>
+                            <td>{{student.phone_number}}</td>
+                            <td>{{student.email}}</td>
+                            <td>{{student.reg_no}}</td>
+                            <td>{{student.preffered_branch}}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
+{% endblock %}
+{% block title %}
+Students
+{% endblock %}
