@@ -73,7 +73,8 @@ def register(request):
                 student = Student(email=email, name=name, password=password, institute=institute, reg_no=reg_no, phone_number=phone_number, puc_college=puc_college, preffered_branch=preffered_branch)
                 student.save()
                 try:
-                    tests = Test.objects.filter(negative_marking=True)
+                    # tests = Test.objects.filter(negative_marking=True)
+                    tests = Test.objects.all()
                     for test in tests:
                         try:
                             student_test = StudentTest(test=test, student=student)
