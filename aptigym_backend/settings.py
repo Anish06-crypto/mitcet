@@ -25,7 +25,7 @@ SECRET_KEY = 'li+$s30p#of37#0kgdo=5#vukyb@ol69+(1$nys(!12-c8_tv%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["mitm-2021.herokuapp.com","127.0.0.1","*"]
+ALLOWED_HOSTS = ["mitm-mockcet.herokuapp.com","127.0.0.1","*"]
 
 
 # Application definition
