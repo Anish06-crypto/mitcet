@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'li+$s30p#of37#0kgdo=5#vukyb@ol69+(1$nys(!12-c8_tv%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["mitm-mockcet.herokuapp.com","127.0.0.1","*"]
 
@@ -100,10 +100,10 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dcp92s7r0qnvvh',
-        'USER': 'slkblkqhnhjxfy',
-        'PASSWORD': 'c5bc12a7ed121ab47740f8e04ab44ae593a4806a4983d411bbda95182a044e77',
-        'HOST': 'ec2-54-156-60-12.compute-1.amazonaws.com',
+        'NAME': 'dcp53n7rjdl1n7',
+        'USER': 'oiujhfqqyyyhpa',
+        'PASSWORD': '7d14a6cbc81b5fb71734ea0bca06904eb0a93ce7980ccdc388a1d6fb7df906fd',
+        'HOST': 'ec2-18-214-238-28.compute-1.amazonaws.com',
         'PORT': '5432'
     }
 }
